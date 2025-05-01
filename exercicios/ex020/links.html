@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizando links</title>
+    <style>
+        /* SELETORES PERSONALIZADOS
+        # = id
+        . = class
+        : = pseudo-classes
+        :: = pseudo-elementos
+        > = children
+        */        a {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: darkred
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: yellowgreen;
+        }
+.especial{
+    background-color: rgb(255, 213, 159);
+}
+        .especial::after{
+            content: '[linkkk]';
+            text-decoration: none;
+            color: darkgrey;
+        }
+        .especial::before{
+            content: '[link]';
+            color: darkgray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <a href="https://www.youtube.com/c/CursoemV%C3%ADdeo" target="_blank" class="especial">
+            <li>Youtube</li>
+        </a>
+        <a href="https://www.youtube.com/watch?v=zPD39UyUky0">
+            <li>GitHub</li>
+        </a>
+        <a href="https://www.youtube.com/watch?v=ieB4RXRCbA8">
+            <li>Linkedin</li>
+        </a>
+    </ul>
+</body>
+
+</html>
